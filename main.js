@@ -1,38 +1,46 @@
-// const button = document.querySelector('#btn');
-// const block = document.querySelector('#block');
-
-// btn.style.width = "100px"
-// btn.style.height = "40px"
-// btn.style.cursor = "pointer";
-// btn.style.border = "none"
-// btn.style.marginTop = "200px"
-// btn.style.marginLeft = "1200px"
-
-// button.addEventListener('click' , function(){
-//     const img = document.createElement('img');
-//     img.setAttribute('alt' , "bu yerda rasm bor")
-//     img.setAttribute("src" , 'https://picsum.photos/seed/picsum/200/200');
-//     img.style.marginLeft = "60px";
-
-//     block.style.border = "1px solid black";
-//     block.style.padding = "50px";
-//     block.appendChild(img);
-//     console.log(img)
-// })
-// // button.addEventListener('click' , function(){
-// //     const img = document.createElement('img');
-// //     img.setAttribute('alt' , "bu yerda rasm bor")
-// //     img.setAttribute("src" , 'https://picsum.photos/200/200?grayscale');
-// //     alert = "bu yerga kirmoqchimisiz"
-// //     img.style.marginLeft = "60px";
-
-// //     block.style.border = "1px solid black";
-// //     block.style.padding = "50px";
-// //     block.appendChild(img);
-// //     console.log(img)
-// // })
-
-
-//uyga vazifa tugatildi
-
-
+const button = document.getElementById("displayRandomCar");
+let data = [
+  {
+    rec: 1,
+    Name: "nature picture ",
+    img: " https://picsum.photos/200/300",
+  },
+  {
+    rec: 2,
+    Name: "nature images",
+    img: "https://picsum.photos/200/300",
+  },
+  {
+    rec: 3,
+    Name: "nature img",
+    img: "https://picsum.photos/200/300",
+  },
+  {
+    rec: 4,
+    Name: "images",
+    img: "https://picsum.photos/200/300",
+  },
+  {
+    rec: 5,
+    Name: "mountain",
+    img: "https://picsum.photos/200/300",
+  },
+];
+button.addEventListener("click", function () {
+  function randomobj() {
+    const allbody = document.body;
+    const randomarr = Math.floor(Math.random() * data.length);
+    const objitem = data[randomarr];
+    const objDiv = document.createElement("div");
+    objDiv.innerHTML =
+      "<h3>" +
+      objitem.Name +
+      "</h3><img src='" +
+      objitem.img +
+      "' alt='" +
+      objitem.Name +
+      "'>";
+    allbody.appendChild(objDiv);
+  }
+  button = randomobj();
+});
