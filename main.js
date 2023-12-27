@@ -1,27 +1,27 @@
-const button = document.getElementById("displayRandomCar");
+const button = document.getElementById("random");
 let data = [
   {
-    rec: 1,
+    number: 1,
     Name: "nature picture ",
     img: " https://picsum.photos/200/300",
   },
   {
-    rec: 2,
+    number: 2,
     Name: "nature images",
     img: "https://picsum.photos/200/300",
   },
   {
-    rec: 3,
+    number: 3,
     Name: "nature img",
     img: "https://picsum.photos/200/300",
   },
   {
-    rec: 4,
+    number: 4,
     Name: "images",
     img: "https://picsum.photos/200/300",
   },
   {
-    rec: 5,
+    number: 5,
     Name: "mountain",
     img: "https://picsum.photos/200/300",
   },
